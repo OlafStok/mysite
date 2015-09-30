@@ -2,3 +2,8 @@ body {
     background-image: images/60042.jpg;
     background-repeat: repeat;
 }
+
+img {
+	width: 2323px;
+	height: 512px;
+}
