@@ -14,4 +14,25 @@
 </br>
 <a href = "http://piratepad.net/ep/pad/newpad"><img src = "https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Notepad_alt.png"</a>
 </div>
+
+<iframe id="MyIFrame" width="400" height="400"></iframe>
+<script type="text/javascript">
+    var iframeURL = 'https://intranet.has.nl/webapps/roosters/studentenroosters/roosters%20den%20Bosch/roosters%20per%20week/Blok%201/index.html';
+    var iframeID = 'MyIFrame';
+
+    function loadIframe(){
+        //pre-authenticate
+        var req = new XMLHttpRequest();
+        req.open("POST",this.iframeURL, false, "970120541", "Magick123!"); //use POST to safely send combination
+        req.send(null); //here you can pass extra parameters through
+
+        //setiFrame's SRC attribute
+        var iFrameWin = document.getElementById(this.iframeID);
+        iFrameWin.src = this.iframeURL + "?extraParameters=true";
+    }
+
+    //onload, call loadIframe() function
+    loadIframe();   
+</script>
+
 </body>
